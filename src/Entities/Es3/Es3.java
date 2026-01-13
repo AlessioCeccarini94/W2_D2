@@ -11,8 +11,28 @@
 package Entities.Es3;
 
 import java.util.HashMap;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Es3 {
-	HashMap<Integer, String> map = new HashMap<>();
-	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Random rndm = new Random();
+		Users alessio = new Users("Alessio", "Ceccarini");
+		Users giangiorgio = new Users("Giangiorgio", "Rossi");
+		Users pupo = new Users("Pupo", "Nazionale");
+		Users celentano = new Users("Adriano", "Celentano");
+
+		HashMap<Integer, Users> map = new HashMap<>();
+
+		map.put(7673823, alessio);
+		map.put(7673824, giangiorgio);
+		map.put(7673822, pupo);
+		map.put(7673821, celentano);
+
+		System.out.println(map);
+		System.out.println(map.get(7673823));
+		map.remove(7673821, celentano);
+		System.out.println(map);
+	}
 }
